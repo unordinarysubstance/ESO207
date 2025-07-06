@@ -1,3 +1,5 @@
+#ESO207
+
 This repository contains all the questions and solutions to the assignments of ESO207 Data Structures and Algorithm for even semester of academic year 2024-25 which was taken by Prof Rajat Mittal, IIT Kanpur.
 
 Assign1: Computing Fibonacci in O(log n) time using modular exponentiation of 2x2 matrix
