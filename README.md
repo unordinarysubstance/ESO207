@@ -1,4 +1,4 @@
-#ESO207
+# ESO207
 
 This repository contains all the questions and solutions to the assignments of ESO207 Data Structures and Algorithm for even semester of academic year 2024-25 which was taken by Prof Rajat Mittal, IIT Kanpur.
 
