@@ -1,0 +1,18 @@
+While mergesort might seem better on paper with its O(n log n) worst-case time, that doesn't mean it always wins in the real world. Quicksort, despite having a worst-case of O(n^2), is often faster in practice — and that has a lot to do with how computers actually work, beyond just asymptotic analysis.
+
+1. Memory and Stability 
+Mergesort is stable — meaning equal elements keep their original order — which is great for things like sorting database records. But it’s also out-of-place, so it uses extra memory (O(n)). Quicksort, on the other hand, is unstable but in-place, making it more memory-efficient and often faster when memory is a concern.
+
+2. Cache Friendliness 
+Quicksort shines when it comes to CPU caching. Its recursive partitioning tends to touch memory in a more localized way, which leads to fewer cache misses. Mergesort doesn’t play as well with cache due to its scattered access pattern during merging. So even though both are O(n log n) on average, quicksort is usually snappier on modern hardware.
+
+3. Constants Matter
+Big O hides the real-world constants. Quicksort’s operations are generally fewer and lighter due to in-place swapping, while mergesort has more memory movement. Also, for small arrays, neither algorithm is ideal — insertion sort often wins, which is why real-world sorting algorithms tend to be hybrids.
+
+4. Real-World Use  
+Most standard libraries don’t use “pure” versions of either algorithm. C++ uses introsort (quicksort + heapsort fallback), which gives the speed of quicksort with safety nets. Python uses Timsort — a stable merge-insertion hybrid optimized for data with existing order. Mergesort is still the go-to for external sorting where sequential access is king.
+
+5. So, What’s Better?  
+There’s no one-size-fits-all answer. If you want stability or you’re sorting data from disk, mergesort is great. But for fast in-memory sorting with average-case speed, quicksort wins — unless you're using a standard library that already made the smart hybrid choice for you.
+
+Bottom line me:rgesort isn’t always faster. In fact, quicksort often is — thanks to cache efficiency, lower constants, and in-place design. But smart sorting in practice means hybrid algorithms that mix and match the strengths of both.
